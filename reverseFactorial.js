@@ -1,10 +1,13 @@
 function reverseFactorial(num) {
-  let last = 1;
-  for (let i=1; i <= num; i++) {
-    if (last === num) {
-      return i + "!";
-    }
-    last *= i;
+  let current = 1;
+  let i = 1;
+  while (current < num) {
+    i++;
+    current *= i;
   }
-  return "None"
+  if (current === num) {
+    return i + "!";
+  } else {
+    return "None";
+  }
 }
