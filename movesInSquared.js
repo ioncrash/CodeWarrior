@@ -1,7 +1,15 @@
 function rot90Clock(strng) {
-  newStrng = "";
-  strngArray = strng.split("\n");
-
+  let newStrng = "";
+  let strngArray = strng.split("\n");
+  for (let i=0; i<strngArray.length; i++) {
+    for (let j=strngArray.length-1; j>=0; j--) {
+      newStrng = newStrng + strngArray[j].charAt(i);
+    }
+    if (i !== (strngArray.length-1)) {
+      newStrng = newStrng + "\n";
+    }
+  }
+  return newStrng;
 }
 
 function diag1Sym(strng) {
@@ -17,6 +25,7 @@ function diag1Sym(strng) {
     }
     return newStrng;
 }
+
 function selfieAndDiag1(strng) {
     newStrng = "";
     strngArray = strng.split("\n");
