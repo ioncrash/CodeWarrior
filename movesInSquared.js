@@ -1,6 +1,6 @@
 function rot90Clock(strng) {
     let newStrng = "";
-    strngArray = strng.split("\n");
+    let strngArray = strng.split("\n");
     for (let i=0; i<strngArray.length; i++) {
       for (let j=0; j<strngArray.length; j++) {
         newStrng = newStrng + strngArray[j].charAt(i);
