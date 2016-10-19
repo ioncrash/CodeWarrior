@@ -1,4 +1,10 @@
 function rot90Clock(strng) {
+  newStrng = "";
+  strngArray = strng.split("\n");
+
+}
+
+function diag1Sym(strng) {
     let newStrng = "";
     let strngArray = strng.split("\n");
     for (let i=0; i<strngArray.length; i++) {
@@ -10,11 +16,6 @@ function rot90Clock(strng) {
       }
     }
     return newStrng;
-}
-
-function diag1Sym(strng) {
-    newStrng = "";
-    strngArray = strng.split("\n");
 }
 function selfieAndDiag1(strng) {
     newStrng = "";
