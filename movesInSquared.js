@@ -27,10 +27,17 @@ function diag1Sym(strng) {
 }
 
 function selfieAndDiag1(strng) {
-    newStrng = "";
-    strngArray = strng.split("\n");
+    let strngArray = strng.split("\n");
+    let diagArray = diag1Sym(strng).split("\n");
+    let newStrng = "";
+    for (let i=0; i<strngArray.length; i++) {
+      newStrng = newStrng + strngArray[i] + "|" + diagArray[i];
+      if (i !== strngArray.length -1) {
+        newStrng = newStrng + "\n";
+      }
+    }
 }
+
 function oper(fct, s) {
-    newStrng = "";
     return fct(s);
 }
