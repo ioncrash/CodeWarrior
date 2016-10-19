@@ -5,6 +5,9 @@ function rot90Clock(strng) {
       for (let j=0; j<strngArray.length; j++) {
         newStrng = newStrng + strngArray[j].charAt(i);
       }
+      if (i !== (strngArray.length-1)) {
+        newStrng = newStrng + "\n";
+      }
     }
     return newStrng;
 }
