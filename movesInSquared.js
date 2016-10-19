@@ -36,6 +36,7 @@ function selfieAndDiag1(strng) {
         newStrng = newStrng + "\n";
       }
     }
+    return newStrng;
 }
 
 function oper(fct, s) {
