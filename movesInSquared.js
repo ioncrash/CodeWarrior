@@ -1,5 +1,5 @@
 function rot90Clock(strng) {
-    newStrng = "";
+    let newStrng = "";
     strngArray = strng.split("\n");
     for (let i=0; i<strngArray.length; i++) {
       for (let j=0; j<strngArray.length; j++) {
