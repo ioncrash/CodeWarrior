@@ -1,0 +1,3 @@
+function alternateCase(s) {
+  return '';
+}
