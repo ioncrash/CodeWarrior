@@ -11,9 +11,12 @@ function tribonacci(signature,n){
   for (let i = 2; i < n-1; i++) {
     let next = twoAgo + last + thisOne;
     seq.push(next);
-    thisOne = next;
-    last = thisOne;
     twoAgo = last;
+    last = thisOne;
+    thisOne = next;
+
+
+    console.log(thisOne, last, twoAgo);
   }
   return seq;
 }
