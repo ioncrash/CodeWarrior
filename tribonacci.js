@@ -9,7 +9,7 @@ function tribonacci(signature,n){
   seq = signature;
 
   for (let i = 2; i < n-1; i++) {
-    next = twoAgo + last + thisOne;
+    let next = twoAgo + last + thisOne;
     seq.push(next);
     thisOne = next;
     last = thisOne;
