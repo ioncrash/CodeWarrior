@@ -1,3 +1,5 @@
+"use strict";
+
 let parseName = function(imgName) {
   let noPeriod = imgName.split('.');
   noPeriod[0] = parseInt(noPeriod[0]);
@@ -7,27 +9,33 @@ let parseName = function(imgName) {
 
 function sortPhotos(pics){
   let newPics = [pics[0]];
+
+  //iterate through total pics
   for (let i = 1; i < pics.length; i++) {
-    //iterate through total pics
     let thisOne = pics[i];
     let thisSig = parseName(thisOne);
 
+    //iterate through new memory bloc
     for (let j=(newPics.length - 1); j>=0; j--) {
       let comparePic = newPics[j];
       let compSig = parseName(comparePic);
-      //iterate through new memory bloc
+      // console.log(`this is thissig ${thisSig}`);
+      // console.log(`this is compsig ${compSig}`);
 
+      console.log(thisSig[0]);
+      console.log(compSig[0]);
+
+      //compare signatures
+
+      if (thisSig[0] > compSig[0] && thisSig[1] > compSig[1]) {
+        console.log('here')
+        newPics.splice(j+1, 0, thisOne);
+        break;
+      }
     }
-
+    newPics.splice(0,0,thisOne);
   }
-
   //add thing to prevent size from exceeding 5
+
+  return newPics;
 }
-
-
-  for (let i = 1; i < pics.length; i++) {
-    for (j = newPics.length - 1; j >= 0; j--) {
-      //add an if here to use the splice function, then a shift if length >5
-    }
-  }
-};
