@@ -1,9 +1,13 @@
+let parseName = function(imgName) {
+  let noPeriod = imgName.split('.');
+  noPeriod[0] = parseInt(noPeriod[0]);
+  noPeriod[1] = parseInt(noPeriod[1].charAt(noPeriod[1].length - 1));
+  return noPeriod;
+}
+
 function sortPhotos(pics){
   let newPics = [pics[0]];
-  let parseName = function(imgName) {
-    let noPeriod = imgName.slice('.');
-    return noPeriod;
-  }
+
 }
 
 
