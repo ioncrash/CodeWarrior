@@ -3,8 +3,8 @@
 let sortImg = function(a,b) {
   let yearA = parseInt(a.slice(0,4));
   let yearB = parseInt(b.slice(0,4));
-  let numA = parseInt(a.slice(a.length-1,a.length));
-  let numB = parseInt(b.slice(b.length-1,b.length));
+  let numA = parseInt(a.slice(8));
+  let numB = parseInt(b.slice(8));
 
   if (yearA > yearB) {
     return 1;
@@ -24,10 +24,10 @@ function sortPhotos(pics){
   let newPics = pics.sort(sortImg);
   let last = newPics[newPics.length - 1];
   let lastYear = parseInt(last.slice(0,4));
-  let lastNum = parseInt(last.slice(last.length-1,last.length));
+  let lastNum = parseInt(last.slice(8));
   newPics.push(lastYear + ".img" + (lastNum + 1));
 
-  newPics = newPics.slice(newPics.length-5,newPics.length);
+  newPics = newPics.slice(newPics.length-6,newPics.length);
 
   return newPics;
 
