@@ -1,6 +1,9 @@
 'use strict';
 
 function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false;
+  }
   let counts = {
     w : 0,
     e : 0,
@@ -12,7 +15,13 @@ function isValidWalk(walk) {
     counts[val] += 1;
   });
 
-  return counts;
+  if (counts.w !== counts.e) {
+    return false;
+  } else if (counts.n !== counts.s) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 module.exports = {isValidWalk};
